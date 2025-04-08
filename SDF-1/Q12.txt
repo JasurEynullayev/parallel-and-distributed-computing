@@ -1,0 +1,16 @@
+12. Paralel Kompüterin Yaddaş Təsnifatı və Məlumat Mübadiləsi
+1. Shared Memory (Paylaşılan Yaddaş)
+Bütün prosessorlar eyni yaddaşı istifadə edir.
+Sürətlidir, amma race condition ola bilər.
+
+Məlumat ötürmə: Lock, Semaphore, Threading
+
+2. Distributed Memory (Paylanmış Yaddaş)
+Hər prosessorun öz yaddaşı var.
+Məlumat şəbəkə üzərindən ötürülür.
+
+Məlumat ötürmə: MPI, Sockets, REST API, gRPC
+
+Sxem:
+Shared Memory:   CPU1 --> RAM <-- CPU2
+Distributed:     Node1[RAM1] <-> Node2[RAM2] <-> Node3[RAM3]

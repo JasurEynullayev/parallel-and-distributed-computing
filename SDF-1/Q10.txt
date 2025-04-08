@@ -1,0 +1,21 @@
+10. Paralel və Paylanmış Proqramlaşdırma fərqləri
+Paralel Proqramlaşdırma
+Eyni maşında, bir neçə nüvədə
+Paylaşılan yaddaş istifadə olunur
+
+Paylanmış Proqramlaşdırma
+Müxtəlif maşınlarda
+Şəbəkə üzərindən əlaqə (LAN, İnternet)
+Məlumat mübadiləsi üçün: RPC, REST API, MPI, gRPC
+
+📊 Müqayisə Cədvəli
+Xüsusiyyət	      Paralel	              Paylanmış
+Yerləşmə	   Eyni sistemdə	      Müxtəlif sistemlərdə
+Yaddaş	         Paylaşılan	              Ayrı-ayrı
+Əlaqə	     Yaddaş vasitəsilə	       Şəbəkə vasitəsilə
+Sürət	       Daha sürətli	           Gecikmə ola bilər
+
+Sxem:
+
+Paralel:        [CPU1][CPU2][CPU3] -> RAM (shared memory)
+Paylanmış:      [Node1] <-> [Node2] <-> [Node3] (networked)

@@ -1,0 +1,35 @@
+9. Concurrency və Parallelism fərqi, Benchmarking izahı
+Concurrency
+Birdən çox iş bir anda görünür, amma əslində növbəli şəkildə icra olunur.
+
+Tək nüvədə vaxt paylaşımı ilə işləyir.
+
+Parallelism
+Eyni anda həqiqətən birdən çox əmrin icra olunmasıdır.
+
+Bir neçə nüvə/prosessorla işləyir.
+
+Müqayisə Cədvəli
+Xüsusiyyət	         Concurrency	            Parallelism
+CPU sayına bağlılıq	    Xeyr	                    Bəli
+Məqsəd	   Resursların effektiv bölüşdürülməsi	 Sürətli icra
+Nümunə	          asyncio, threading	        multiprocessing, Pool
+
+
+Benchmarking – Performans Ölçmə
+Nə üçün?
+Kodun nə qədər səmərəli işlədiyini ölçmək
+Optimallaşdırma üçün əsas
+
+Python vasitələri:
+time – sadə ölçü
+timeit – funksiyaların dəqiq ölçülməsi
+cProfile – detallı profil analiz
+
+Kod misalı
+
+import time
+
+start = time.time()
+sum([i for i in range(10**6)])
+print("Vaxt:", time.time() - start)

@@ -1,0 +1,60 @@
+7. Von Neumann prinsipləri və paralel proqramlaşdırma ilə müqayisəsi
+Von Neumann Arxitekturası (Von Neumann Architecture)
+Tərifi:
+1945-ci ildə John von Neumann tərəfindən təklif olunan bu arxitektura, müasir kompüter sistemlərinin əsasını təşkil edir.
+
+Əsas Komponentləri:
+Memory (Yaddaş) – Proqram kodları və verilənlər burada saxlanılır.
+
+Control Unit (İdarəetmə vahidi) – Komandaları oxuyur və icra edir.
+
+ALU (Aritmetik Məntiq Vahidi) – Riyazi və məntiq əməliyyatlarını icra edir.
+
+Input/Output – Xarici alətlərlə əlaqə (klaviatura, ekran və s.)
+
+Bus System – Komponentlər arasında məlumat ötürülməsini təmin edir.
+
+İş Prinsipi:
+Eyni yaddaşda əmrlər və verilənlər saxlanılır.
+
+Məlumat ardıcıl olaraq oxunur və icra olunur.
+
+“Fetch → Decode → Execute” ardıcıllığı ilə işləyir.
+
+Əsas Məhdudiyyət – Von Neumann Bottleneck:
+CPU yaddaşdan həm kod, həm də məlumat almalı olur → boğaz effekti (bottleneck) yaranır.
+
+Paralellik üçün uyğunsuzdur, çünki bütün tapşırıqlar bir prosessor tərəfindən növbə ilə icra olunur.
+
+Paralel Proqramlaşdırma (Parallel Computing)
+Tərifi:
+Paralel proqramlaşdırma eyni anda bir neçə əmrin/proqram parçasının birdən çox prosessor nüvəsi tərəfindən icra edilməsini nəzərdə tutur.
+
+Əsas İdeya:
+Tapşırıqlar kiçik hissələrə bölünür.
+
+Hissələr eyni anda fərqli prosessorlar (və ya nüvələr) tərəfindən paralel şəkildə icra olunur.
+
+Üstünlüklər:
+İcra müddəti azalır.
+
+Resurslar daha səmərəli istifadə olunur.
+
+Böyük verilənlərlə (big data) işləmək mümkün olur.
+
+
+
+Müqayisə Cədvəli: Von Neumann vs Paralel Proqramlaşdırma
+
+Xüsusiyyət	      Von Neumann Arxitekturası	             Paralel Proqramlaşdırma
+Arxitektura tipi	 Serial (Ardıcıl)	                      Paralel
+CPU sayı	          Tək prosessor	                    Bir neçə prosessor/nüvə
+Əmrlərin icrası	        Növbə ilə	                     Eyni anda (paralel)
+Performans	            Məhdud	                               Yüksək 
+Tətbiq sahəsi   Sadə proqramlar, mikrokontroller     Elmi hesablama, oyunlar, data analizi
+Problem	          Von Neumann Bottleneck	           Sinkronizasiya, məlumat paylaşımı
+
+
+Nəticə
+Von Neumann arxitekturası fundamental olsa da, müasir tələbləri qarşılamaq üçün paralel və paylanmış sistemlərə keçid labüddür.
+Paralel proqramlaşdırma performans, resurs istifadəsi və sürət baxımından müasir dünyada daha effektivdir.

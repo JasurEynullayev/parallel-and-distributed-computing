@@ -1,0 +1,61 @@
+8. CPU növləri, Process və Thread işləmə məntiqi, Python GIL problemi
+CPU növləri
+1. Single-core CPU
+Yalnız bir əmri bir anda icra edə bilir.
+Paralellik vaxt paylaşımı (time-sharing) ilə simulyasiya olunur.
+
+2. Multi-core CPU
+Bir neçə nüvə eyni anda əmrlər icra edə bilər.
+Həqiqi paralel proqramlaşdırma mümkündür.
+
+3. Hyper-threaded CPU
+Hər bir fiziki nüvə bir neçə virtual nüvə kimi işləyə bilər (Intel HyperThreading).
+Tətbiqlərdə yüksək performans yarada bilər.
+
+Process və Thread Fərqləri
+Xüsusiyyət	           Process	                                  Thread
+Yaddaş	                Ayrı	                             Paylaşılan (ana proseslə)
+İcra	          Asinxron və müstəqil	                Paralel, lakin müstəqil deyil
+Resurslar	 Ağır (daha çox RAM/CPU istifadə edir)	       Yüngül, daha sürətlidir
+Təhlükəsizlik	     Təhlükəsiz	                           Risklidir (race condition və s.)
+
+
+Kod misalı:
+
+from multiprocessing import Process
+from threading import Thread
+import time
+
+def islem():
+    print("Başladı")
+    time.sleep(2)
+    print("Bitdi")
+
+# Process
+p = Process(target=islem)
+p.start()
+
+# Thread
+t = Thread(target=islem)
+t.start()
+
+
+Python GIL (Global Interpreter Lock)
+Nədir?
+CPython interpreterində bir anda yalnız bir thread aktiv ola bilər.
+Bu, multi-threading ilə həqiqi paralelliyi əngəlləyir.
+
+Kimə problem yaradır?
+CPU-bound proseslərdə (məsələn, hesablamalar)
+IO-bound proseslərdə isə GIL az təsir göstərir.
+
+Həll yolları:
+multiprocessing → proses səviyyəsində işləyir, GIL yoxdur.
+Alternativ Python interpreterləri: Jython, IronPython, PyPy
+
+
+GIL-in yaratdığı məhdudiyyətlər Python-da axınlarla (threads) işləmək istədikdə əsas problemlər yaradır. 
+Buna görə də, Python-un bu xüsusiyyəti axınların eyni zamanda icrasını (thread concurrency) məcburi edir və bu, 
+paralel proqramlaşdırma ilə müqayisədə qaçılmaz bir məhdudiyyətdir. 
+Bu problemi asinxron model və asyncio kitabxanası ilə həll edə bilərik.
+

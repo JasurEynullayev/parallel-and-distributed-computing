@@ -1,0 +1,22 @@
+11. Paralel Kompüter Arxitekturası (Flynn's taxonomy)
+Flynn's Taxonomy (1972)
+
+1. SISD – Single Instruction, Single Data
+Serial
+Klassik PC-lər
+
+2. SIMD – Single Instruction, Multiple Data
+Eyni əmrlə bir neçə məlumat işlənir (GPU, vector processors)
+
+3. MISD – Multiple Instruction, Single Data
+Teorikdir, real tətbiqi azdır
+
+4. MIMD – Multiple Instruction, Multiple Data
+Fərqli əmrlər və məlumatlar (modern multi-core CPU-lar)
+
+Cədvəl
+Tip	    İstiqamət	                 Misal
+SISD	Serial	                   Klassik PC
+SIMD	Paralel (data level)	    GPU, SSE
+MISD	Nadir	               Fault-tolerant sistemlər
+MIMD	Ən geniş yayılmış	   Multi-core CPU, Cluster
